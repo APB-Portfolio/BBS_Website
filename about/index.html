@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | BBS Solutions</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
 
+<body style="padding-top: 24px;">
+  <div class="container" style="padding: 24px 0 56px;">
+    <a href="/" style="display:inline-block; margin-bottom: 18px;">← Back to Home</a>
+
+    <div class="card" style="display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="flex: 0 0 260px;">
+        <!-- Add your photo later -->
+        <div style="width:260px; height:320px; border-radius:14px; background:#e9e7e2; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:rgba(20,20,20,.55);">
+          Your Photo
+        </div>
+      </div>
+
+      <div style="flex: 1; min-width: 260px;">
+        <h1 style="margin:0 0 10px;">Leadership Behind BBS Solutions</h1>
+        <p style="margin:0 0 14px; color: var(--muted);">
+          I founded BBS Solutions to help growing businesses bring clarity and structure to their operations.
+        </p>
+
+        <p style="margin:0 0 14px; color: var(--muted);">
+          With over 15 years of experience working across workflow automation, systems integration, and data strategy,
+          I’ve designed and implemented operational systems in complex service environments where efficiency and visibility matter.
+          My focus has always been the same—building structured, scalable solutions that support smarter decision-making.
+        </p>
+
+        <p style="margin:0 0 14px; color: var(--muted);">
+          I approach every engagement with a disciplined, analytical mindset. Before implementing tools, I evaluate workflows.
+          Before building reports, I clarify objectives. My goal is not just to improve systems, but to strengthen how a business
+          operates for the long term.
+        </p>
+
+        <p style="margin:0; color: var(--muted);">
+          BBS Solutions is built on the belief that operational clarity drives sustainable growth.
+        </p>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" style="border:1px solid var(--border); background:#fff;" href="#" title="Coming soon">Portfolio (Coming Soon)</a>
+          <a class="btn" style="border:1px solid var(--border); background:#fff;" href="#" title="Coming soon">Blog (Coming Soon)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> BBS Solutions. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
