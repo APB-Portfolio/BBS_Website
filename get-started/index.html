@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started | BBS Solutions</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
 
+<body style="padding-top: 24px;">
+  <div class="container" style="padding: 24px 0 56px;">
+    <a href="/" style="display:inline-block; margin-bottom: 18px;">← Back to Home</a>
+
+    <div class="card">
+      <h1 style="margin:0 0 10px;">Get Started</h1>
+      <p style="margin:0 0 18px; color: var(--muted);">
+        Tell us about your business and the operational challenges you’re looking to improve.
+        We’ll review your submission and respond within one business day.
+      </p>
+
+      <!-- Static form placeholder (we’ll wire this up next) -->
+      <form>
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div>
+            <label>Full Name</label><br />
+            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="text" />
+          </div>
+          <div>
+            <label>Company Name</label><br />
+            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="text" />
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <label>Email Address</label><br />
+            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="email" />
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <label>Briefly describe your operational challenge</label><br />
+            <textarea style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); min-height: 140px;"></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <button class="btn btn-primary" type="button">Submit</button>
+        </div>
+
+        <p style="margin-top: 12px; color: rgba(20,20,20,.55); font-size: 13px;">
+          (Next step: we’ll connect this form to email or storage. For now it’s a layout placeholder.)
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> BBS Solutions. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
