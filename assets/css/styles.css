@@ -121,7 +121,7 @@ a:hover{ text-decoration: underline; }
   padding: 120px 0 70px;
   background:
     linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
-    url("/assets/images/hero-whiteboard.jpg");
+    url("/assets/images/hero-whiteboard.png");
   background-size: cover;
   background-position: center;
   color:#fff;
