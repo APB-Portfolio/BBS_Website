@@ -1,12 +1,163 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BBS Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBS Solutions | Operational Systems Consulting</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
-    <h1>BBS Solutions</h1>
-    <p>Site coming soon.</p>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <div class="name">BBS Solutions</div>
+        <div class="tag">Operational Systems Consulting</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="/about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="/get-started">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>We help growing businesses streamline and integrate their core operations.</h1>
+      <p>
+        We design automation, reporting, and connected systems that simplify operations
+        and strengthen decision-making.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/get-started">Get Started</a>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>We deliver structured, scalable solutions across four core areas.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card">
+          <h3>Systems Assessment</h3>
+          <p>
+            We conduct a structured evaluation of your operational workflows, systems,
+            and reporting architecture. You receive a prioritized roadmap focused on
+            efficiency, integration, and scalable performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Process Automation</h3>
+          <p>
+            We redesign and automate critical workflows to eliminate bottlenecks and
+            improve operational consistency—approvals, document routing, and repeatable processes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Data &amp; Reporting</h3>
+          <p>
+            We establish structured reporting frameworks that bring clarity to performance and
+            accountability—dashboards that support real operational decisions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Systems Integration</h3>
+          <p>
+            We align your core systems so your operations function as a coordinated, connected
+            environment—reducing duplicate work and disconnected information.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Approach</h2>
+        <p>Our methodology is designed to create operational clarity before change and architectural stability before scale.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Assess</h3>
+          <p>
+            We analyze workflows, systems, and reporting to identify inefficiencies, integration gaps,
+            and operational risk—so the path forward is clear.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Architect</h3>
+          <p>
+            We design practical solutions aligned to how your business operates—prioritized for impact,
+            feasibility, and long-term scalability.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Execute &amp; Refine</h3>
+          <p>
+            We implement with precision, test thoroughly, and optimize over time to ensure the solution
+            performs as your business grows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="card about-preview">
+        <div class="text">
+          <h2>About BBS Solutions</h2>
+          <p>
+            BBS Solutions is an operations-focused consulting firm built to help growing businesses
+            improve workflow efficiency, strengthen reporting, and connect the systems that run the business.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="/about">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (BOTTOM) -->
+  <section id="contact" class="contact-band">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you have a question or want to discuss an operational challenge, reach out anytime.</p>
+      <a class="email" href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+
+      <div style="margin-top:16px;">
+        <a class="btn btn-primary" href="/get-started">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    © <span id="year"></span> BBS Solutions. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
