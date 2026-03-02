@@ -121,7 +121,7 @@ a:hover{ text-decoration: underline; }
   padding: 120px 0 70px;
   background:
     linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
-    url("/assets/images/hp_background.png");
+    url("/assets/images/background-logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
