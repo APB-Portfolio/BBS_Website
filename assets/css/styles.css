@@ -2,11 +2,11 @@
 
 /* ---------- Base ---------- */
 :root{
-  --bg: #f7f6f3;             /* subtle off-white */
+  --bg: #f7f6f3;
   --card: #ffffff;
-  --text: #141414;           /* near-black */
+  --text: #141414;
   --muted: #5b5b5b;
-  --accent: #1b1b1b;         /* dark charcoal */
+  --accent: #1b1b1b;
   --accent-hover: #000000;
   --border: rgba(20,20,20,.10);
   --shadow: 0 10px 30px rgba(0,0,0,.08);
@@ -32,7 +32,7 @@ a:hover{ text-decoration: underline; }
   margin: 0 auto;
 }
 
-/* ---------- Nav (transparent over hero) ---------- */
+/* ---------- Nav ---------- */
 .nav{
   position: absolute;
   top:0; left:0; right:0;
@@ -115,20 +115,36 @@ a:hover{ text-decoration: underline; }
 /* ---------- Hero ---------- */
 .hero{
   position: relative;
+  overflow: hidden;
   min-height: 78vh;
   display:flex;
   align-items: center;
   padding: 120px 0 70px;
   background:
     linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
-    url("/assets/images/background-logo.png");
+    url("/assets/images/hp_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color:#fff;
 }
 
+/* Watermark overlay */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: url("/assets/images/logo-light.png") no-repeat;
+  background-position: center 82%;
+  background-size: 560px auto;
+  opacity: .12;
+  pointer-events:none;
+}
+
+/* Keep text above watermark */
 .hero-content{
+  position: relative;
+  z-index: 1;
   max-width: 780px;
 }
 
@@ -260,8 +276,16 @@ a:hover{ text-decoration: underline; }
   .grid-3{ grid-template-columns: 1fr; }
 }
 
+@media (max-width: 640px){
+  .hero::after{
+    background-size: 380px auto;
+    background-position: center 86%;
+    opacity: .10;
+  }
+}
+
 @media (max-width: 560px){
   .container{ width: min(var(--max), calc(100% - 32px)); }
   .nav-links{ gap: 12px; }
-  .nav-links a{ display:none; } /* keeps it clean on mobile for now */
+  .nav-links a{ display:none; }
 }
