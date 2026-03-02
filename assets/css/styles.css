@@ -129,21 +129,21 @@ a:hover{ text-decoration: underline; }
   color:#fff;
 }
 
-/* Watermark overlay - LOWER RIGHT like your red circle */
+/* Watermark overlay - pushed DOWN into lower-right quadrant */
 .hero::after{
   content:"";
   position:absolute;
 
-  right: -140px;        /* slight off-screen push */
-  bottom: 40px;         /* sits in lower-right quadrant */
-  width: 1000px;        /* controlled size */
-  height: 1000px;
+  right: -260px;      /* push farther off the right edge */
+  bottom: -220px;     /* push DOWN so it sits lower-right */
+  width: 1050px;      /* slightly smaller so it’s not dominating */
+  height: 1050px;
 
   background: url("/assets/images/logo-light.png") no-repeat;
   background-size: contain;
   background-position: center;
 
-  opacity: .08;         /* subtle executive feel */
+  opacity: .08;
   pointer-events:none;
   z-index: 1;
 }
