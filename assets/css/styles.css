@@ -129,21 +129,21 @@ a:hover{ text-decoration: underline; }
   color:#fff;
 }
 
-/* Watermark overlay (bottom-right, oversized, subtle) */
+/* Watermark overlay - LOWER RIGHT like your red circle */
 .hero::after{
   content:"";
   position:absolute;
 
-  right: -250px;     /* push slightly off screen */
-  bottom: -200px;    /* drop it lower */
-  width: 1500px;     /* make it large for presence */
-  height: 1500px;
+  right: -140px;        /* slight off-screen push */
+  bottom: 40px;         /* sits in lower-right quadrant */
+  width: 1000px;        /* controlled size */
+  height: 1000px;
 
-  background: url("/assets/images/logo-light.png") no-repeat; /* change if you switch to logo-watermark.png */
+  background: url("/assets/images/logo-light.png") no-repeat;
   background-size: contain;
   background-position: center;
 
-  opacity: .08;
+  opacity: .08;         /* subtle executive feel */
   pointer-events:none;
   z-index: 1;
 }
@@ -283,13 +283,12 @@ a:hover{ text-decoration: underline; }
   .grid-3{ grid-template-columns: 1fr; }
 }
 
-/* Mobile watermark tuning */
 @media (max-width: 640px){
   .hero::after{
-    right: -140px;
-    bottom: -220px;
-    width: 900px;
-    height: 900px;
+    right: -80px;
+    bottom: -60px;
+    width: 700px;
+    height: 700px;
     opacity: .07;
   }
 }
