@@ -47,11 +47,27 @@ a:hover{ text-decoration: underline; }
   gap: 16px;
 }
 
+/* UPDATED: brand now supports logo + stacked text */
 .brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Logo in navbar */
+.brand img{
+  height: 44px;        /* tweak 40–52px if you want */
+  width: auto;
+  display:block;
+}
+
+/* Wrapper for name + tagline */
+.brand-text{
   display:flex;
   flex-direction: column;
   gap: 2px;
-  color: #fff;
 }
 
 .brand .name{
@@ -218,6 +234,14 @@ a:hover{ text-decoration: underline; }
   max-width: 720px;
 }
 
+/* NEW: light logo for About section */
+.about-logo{
+  height: 56px;     /* tweak 48–64px */
+  width: auto;
+  display:block;
+  margin: 0 0 14px;
+}
+
 .about-preview p{
   margin: 8px 0 0;
   color: var(--muted);
@@ -264,4 +288,8 @@ a:hover{ text-decoration: underline; }
   .container{ width: min(var(--max), calc(100% - 32px)); }
   .nav-links{ gap: 12px; }
   .nav-links a{ display:none; } /* keeps it clean on mobile for now */
+
+  /* Mobile logo sizing */
+  .brand img{ height: 36px; }
+  .about-logo{ height: 48px; }
 }
