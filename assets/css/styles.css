@@ -153,9 +153,7 @@ a:hover{ text-decoration: underline; }
   z-index: 2;
   max-width: 780px;
 
-  margin-left: 0;        /* reset */
-  margin-right: auto;    /* push it left */
-  padding-right: 120px;  /* creates breathing room from watermark */
+  margin-left: 40px;   /* gentle shift right */
 }
 
 .hero h1{
