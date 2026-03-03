@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Burton Business Solutions</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body style="padding-top: 24px;">
+  <div class="container" style="padding: 24px 0 56px;">
+    <a href="/" style="display:inline-block; margin-bottom: 18px;">← Back to Home</a>
+
+    <div class="card">
+      <h1 style="margin:0 0 10px;">Thank you — we got it.</h1>
+      <p style="margin:0 0 18px; color: var(--muted);">
+        Your message has been submitted successfully. We’ll review it and get back to you within one business day.
+      </p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;">
+        <a class="btn btn-primary" href="/get-started">Submit Another</a>
+        <a class="btn btn-ghost" href="/">Return Home</a>
+      </div>
+
+      <p style="margin-top: 14px; color: rgba(20,20,20,.55); font-size: 13px;">
+        If you need to reach us sooner, email
+        <a class="email" href="mailto:andrewp@burtonbusinesssolutions.com">andrewp@burtonbusinesssolutions.com</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> Burton Business Solutions. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
