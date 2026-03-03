@@ -19,34 +19,51 @@
       </p>
 
       <!-- Static form placeholder (we’ll wire this up next) -->
-      <form>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
-          <div>
-            <label>Full Name</label><br />
-            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="text" />
-          </div>
-          <div>
-            <label>Company Name</label><br />
-            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="text" />
-          </div>
-          <div style="grid-column: 1 / -1;">
-            <label>Email Address</label><br />
-            <input style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" type="email" />
-          </div>
-          <div style="grid-column: 1 / -1;">
-            <label>Briefly describe your operational challenge</label><br />
-            <textarea style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); min-height: 140px;"></textarea>
-          </div>
-        </div>
+<form action="https://formspree.io/f/xgoljlrj" method="POST">
+  <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
+    <div>
+      <label>Full Name</label><br />
+      <input 
+        style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" 
+        type="text" 
+        name="name"
+        required 
+      />
+    </div>
 
-        <div style="margin-top: 16px;">
-          <button class="btn btn-primary" type="button">Submit</button>
-        </div>
+    <div>
+      <label>Company Name</label><br />
+      <input 
+        style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" 
+        type="text" 
+        name="company"
+      />
+    </div>
 
-        <p style="margin-top: 12px; color: rgba(20,20,20,.55); font-size: 13px;">
-          (Next step: we’ll connect this form to email or storage. For now it’s a layout placeholder.)
-        </p>
-      </form>
+    <div style="grid-column: 1 / -1;">
+      <label>Email Address</label><br />
+      <input 
+        style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);" 
+        type="email" 
+        name="email"
+        required 
+      />
+    </div>
+
+    <div style="grid-column: 1 / -1;">
+      <label>Briefly describe your operational challenge</label><br />
+      <textarea 
+        style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); min-height: 140px;" 
+        name="message"
+        required
+      ></textarea>
+    </div>
+  </div>
+
+  <div style="margin-top: 16px;">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>    
     </div>
   </div>
 
