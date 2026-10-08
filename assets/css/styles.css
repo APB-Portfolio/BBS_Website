@@ -306,9 +306,12 @@ a:hover {
 }
 
 /* ---------- Footer ---------- */
+
+/* ---------- Footer ---------- */
 .footer {
   padding: 22px 0;
-  color: rgba(20,20,20,.55);
+  background: #222222;
+  color: #ffffff;
   font-size: 13px;
   text-align: center;
 }
