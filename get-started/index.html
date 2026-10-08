@@ -4,47 +4,321 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Started | Burton Business Solutions</title>
+  <title>Contact Us | Burton Business Solutions</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    .mobile-menu-button {
+      display: none;
+      background: transparent;
+      color: inherit;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .contact-page {
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
+
+    .contact-heading {
+      margin-bottom: 22px;
+    }
+
+    .contact-heading h1 {
+      margin: 0 0 10px;
+    }
+
+    .contact-heading p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .contact-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 18px;
+    }
+
+    .form-field {
+      margin-bottom: 16px;
+    }
+
+    .form-field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+      background: #fff;
+      color: #111;
+    }
+
+    .form-field textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .contact-method {
+      margin-bottom: 24px;
+    }
+
+    .contact-method h3 {
+      margin: 0 0 8px;
+    }
+
+    .contact-method a {
+      overflow-wrap: anywhere;
+    }
+
+    .submit-button {
+      cursor: pointer;
+      font: inherit;
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 16px 0;
+        gap: 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px 12px;
+      }
+
+      .contact-page {
+        padding-top: 24px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
 
-<body style="padding-top: 24px;">
-  <div class="container" style="padding: 24px 0 56px;">
-    <a href="/" style="display:inline-block; margin-bottom: 18px;">← Back to Home</a>
+<body>
 
-    <div class="card">
-      <h1 style="margin:0 0 10px;">Get Started</h1>
-
-      <p style="margin:0 0 18px; color: var(--muted);">
-        Ready to improve your business operations? We'd love to hear
-        about your business and the challenges you're facing.
-        Reach out directly and let's discuss how Burton Business
-        Solutions can help.
-      </p>
-
-      <a
-        href="mailto:andrewp@burtonbusinesssolutions.com?subject=Business%20Consultation%20Inquiry"
-        class="btn btn-primary"
-        style="display:inline-block; text-decoration:none;"
-      >
-        Contact Us
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <div class="name">Burton Business Solutions</div>
+        <div class="tag">Operational Systems Consulting</div>
       </a>
 
-      <p style="margin-top:18px; color:var(--muted);">
-        Or email us directly at
-        <a href="mailto:andrewp@burtonbusinesssolutions.com">
-          andrewp@burtonbusinesssolutions.com
-        </a>
+      <button
+        class="mobile-menu-button"
+        type="button"
+        id="menuButton"
+        aria-label="Toggle navigation"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+      >☰</button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/approach/">Approach</a>
+        <a href="/about/">About</a>
+        <a class="btn btn-primary" href="/get-started/">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTACT -->
+  <main class="container contact-page">
+
+    <div class="contact-heading">
+      <h1>Contact Us</h1>
+      <p>
+        Ready to improve your business operations?
+        Tell us a little about your business and the challenges
+        you're facing, or reach out directly.
       </p>
     </div>
-  </div>
 
+    <div class="contact-layout">
+
+      <!-- WEB3FORMS CONTACT FORM -->
+      <div class="card contact-card">
+        <h2>Send Us a Message</h2>
+
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="79a65a9f-c6c8-49ab-9dc7-357ba566bea6"
+          />
+
+          <input
+            type="hidden"
+            name="subject"
+            value="BBS - New Website Inquiry"
+          />
+
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://burtonbusinesssolutions.com/thank-you.html"
+          />
+
+          <div class="form-field">
+            <label for="fullName">Full Name *</label>
+            <input
+              type="text"
+              id="fullName"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="company">Company Name</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              autocomplete="organization"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Briefly Describe Your Business Challenge *</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Spam protection honeypot -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display:none;"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <button
+            class="btn btn-primary submit-button"
+            type="submit"
+          >
+            Submit Message
+          </button>
+        </form>
+      </div>
+
+      <!-- DIRECT CONTACT INFORMATION -->
+      <div class="card contact-card">
+        <h2>Contact Information</h2>
+
+        <div class="contact-method">
+          <h3>Email</h3>
+          <a href="mailto:andrewp@burtonbusinesssolutions.com">
+            andrewp@burtonbusinesssolutions.com
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <h3>Phone</h3>
+          <a href="tel:+16189809549">
+            (618) 980-9549
+          </a>
+        </div>
+
+        <p style="color:var(--muted); line-height:1.6;">
+          Whether you're looking to automate a process,
+          improve reporting, explore AI, or get more out
+          of your existing technology, we're happy to
+          discuss your needs.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
   <div class="footer">
     © <span id="year"></span> Burton Business Solutions. All rights reserved.
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile hamburger menu
+    const menuButton = document.getElementById("menuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = mainNavigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
   </script>
+
 </body>
 </html>
