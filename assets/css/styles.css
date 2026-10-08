@@ -408,12 +408,12 @@ a:hover {
   }
 }
 
+
 /* Mobile hamburger menu */
 @media (max-width: 768px) {
   .mobile-menu-button {
-    color: #F4C76B;
-    border: 2px solid #F4C76B;
-    background: #333333;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: #444444;
   }
 }
-
