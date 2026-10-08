@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,60 +6,267 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Burton Business Solutions</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    /* Mobile navigation */
+    .mobile-menu-button {
+      display: none;
+      background: transparent;
+      color: inherit;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* About page */
+    .about-page {
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
+
+    .about-card {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about-photo {
+      flex: 0 0 260px;
+    }
+
+    .about-photo img {
+      display: block;
+      width: 260px;
+      height: 320px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .about-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-content h1 {
+      margin: 0 0 8px;
+    }
+
+    .founder-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 14px;
+    }
+
+    .about-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .about-actions .btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 16px 0;
+        gap: 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px 12px;
+      }
+
+      .about-page {
+        padding-top: 24px;
+      }
+
+      .about-card {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .about-photo {
+        flex: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .about-photo img {
+        width: 220px;
+        height: 270px;
+      }
+
+      .about-content {
+        width: 100%;
+      }
+
+      .about-actions .btn {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
-<body style="padding-top: 24px;">
-  <div class="container" style="padding: 24px 0 56px;">
-    <a href="/" style="display:inline-block; margin-bottom: 18px;">← Back to Home</a>
+<body>
 
-    <div class="card" style="display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap;">
-      
-      <!-- Headshot Section -->
-      <div style="flex: 0 0 260px;">
-        <img src="/assets/images/andrew-headshot.jpg"
-             alt="Andrew Burton - Consultant"
-             style="width:260px; height:320px; object-fit:cover; border-radius:14px; border:1px solid var(--border);">
-      </div>
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="container nav-inner">
 
-      <!-- Text Section -->
-      <div style="flex: 1; min-width: 260px;">
-        <h1 style="margin:0 0 10px;">Burton Business Solutions Founder</h1>
-        <p style="margin:0 0 14px; color: var(--muted);">
-          I founded Burton Business Solutions to help growing businesses bring clarity and structure to their operations by providing them with analyitical, intelligent solutions that fit the needs of today and can scale for tomorrow.
-        </p>
+      <a class="brand" href="/">
+        <div class="name">Burton Business Solutions</div>
+        <div class="tag">Operational Systems Consulting</div>
+      </a>
 
-        <p style="margin:0 0 14px; color: var(--muted);">
-          With over 15 years of experience working across workflow automation, systems integration, and data strategy,
-          I’ve designed and implemented operational systems in complex corporate environments where efficiency and visibility matter.
-          My focus has always been the same—building structured, scalable solutions that support smarter decision-making.
-        </p>
+      <button
+        class="mobile-menu-button"
+        type="button"
+        id="menuButton"
+        aria-label="Toggle navigation"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+      >☰</button>
 
-        <p style="margin:0 0 14px; color: var(--muted);">
-          I approach every engagement with a disciplined, analytical mindset. Before implementing tools, I evaluate workflows.
-          Before building reports, I clarify objectives. My goal is not just to improve systems, but to strengthen how a business
-          operates for the long term.
-        </p>
-
-        <p style="margin:0; color: var(--muted);">
-          Burton Business Solutions is built on the belief that operational clarity drives sustainable growth.
-        </p>
-
-        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/andrewpaulburton" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" style="border:1px solid var(--border); background:#fff;" href="#" title="Coming soon">Portfolio (Coming Soon)</a>
-          <a class="btn" style="border:1px solid var(--border); background:#fff;" href="#" title="Coming soon">Blog (Coming Soon)</a>
-        </div>
-      </div>
+      <nav class="nav-links" id="mainNavigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/approach/">Approach</a>
+        <a href="/about/">About</a>
+        <a class="btn btn-primary" href="/get-started/">Contact Us</a>
+      </nav>
 
     </div>
-  </div>
+  </header>
 
+  <!-- ABOUT -->
+  <main class="container about-page">
+
+    <div class="card about-card">
+
+      <!-- HEADSHOT -->
+      <div class="about-photo">
+        <img
+          src="/assets/images/andrew-headshot.jpg"
+          alt="Andrew Burton - Founder of Burton Business Solutions"
+        />
+      </div>
+
+      <!-- FOUNDER STORY -->
+      <div class="about-content">
+
+        <h1>Meet the Founder</h1>
+        <div class="founder-name">Andrew Burton</div>
+
+        <p>
+          I founded Burton Business Solutions to help growing businesses
+          improve how they operate through practical, intelligent technology
+          solutions. My goal is to help businesses work more efficiently,
+          make better decisions, and get more value from the systems
+          they already use.
+        </p>
+
+        <p>
+          With over 15 years of experience working across workflow automation,
+          systems integration, and data strategy, I've designed and implemented
+          operational systems in complex corporate environments where
+          efficiency and visibility matter. My focus has always been the
+          same—building structured, scalable solutions that support
+          smarter decision-making.
+        </p>
+
+        <p>
+          I approach every engagement with a disciplined, analytical mindset.
+          Before implementing tools, I evaluate workflows. Before building
+          reports, I clarify objectives. My goal is not just to improve
+          systems, but to strengthen how a business operates for the long term.
+        </p>
+
+        <p>
+          Burton Business Solutions is built on the belief that operational
+          clarity drives sustainable growth.
+        </p>
+
+        <!-- ACTION BUTTONS -->
+        <div class="about-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://www.linkedin.com/in/andrewpaulburton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            class="btn btn-primary"
+            href="/get-started/"
+          >
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
   <div class="footer">
     © <span id="year"></span> Burton Business Solutions. All rights reserved.
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile hamburger menu
+    const menuButton = document.getElementById("menuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = mainNavigation.classList.toggle("open");
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
   </script>
+
 </body>
 </html>
