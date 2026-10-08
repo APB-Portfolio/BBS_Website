@@ -407,3 +407,13 @@ a:hover {
     font-size: 11px;
   }
 }
+
+/* Mobile hamburger menu */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    color: #F4C76B;
+    border: 2px solid #F4C76B;
+    background: #333333;
+  }
+}
+
